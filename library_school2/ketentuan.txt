@@ -1,0 +1,68 @@
+Penerbit	menerbitkan	buku
+Siswa		meminjam	buku
+Pustakawan	meminjam	buku	
+
+ENTITAS penerbit :
+-. id_penerbit (primary key)
+-. nama
+-. kota
+-. phone
+-. email
+
+ENTITAS buku :
+-. id_buku (primary key)
+-. judul
+-. pengarang
+-. photo
+-. harga
+-. jumlah
+
+ENTITAS meminjam :
+-. id_peminjaman (primary key)
+-. tgl_pinjam
+-. tgl_kembali
+-. denda
+
+ENTITAS siswa:
+-. NIS (primary key)
+-. nama
+-. jurusan
+-. tingkat
+-. kelas
+-. email
+-. photo
+-. phone
+
+ENTITAS pustakawan :
+-. id_pustakawan (primary key)
+-. username
+-. password
+-. nama
+-. phone
+
+TABLE :
+- tb_peminjaman_master :
+	- id_pinjaman
+	- id_pustakawan
+	- nis
+	- tgl_pinjam
+
+- tb_peminjaman_detail :
+	- id_pinjaman
+	- id_buku
+	- tgl_kembali
+
+- tb_buku :
+	- id_buku
+	- judul
+	- pengarang
+	- photo
+	- harga
+	- penerbit
+	- jumlah
+
+- tb_penerbit :
+	- 
+
+Note :
+- Masa pinjam max 3 hari, jika lebih denda Rp.1000,-.
